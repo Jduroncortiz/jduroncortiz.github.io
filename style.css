@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inconsolata", monospace;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+
+.profile {
+  max-width: 44.8rem;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile__inner {
+  margin: 0 3rem;
+}
+
+.profile__inner a {
+  color: #000;
+}
+
+.profile img {
+  border-radius: 100%;
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  width: 10rem;
+  filter: grayscale(0%);
+
+}
+
+.profile h1 {
+  margin: 1rem 0;
+}
+
+.profile p {
+  margin: 1rem 0 3rem 0;
+}
+
+.profile ul {
+  margin: 0;
+  padding: 0;
+}
+
+.profile ul li {
+  list-style-type: none;
+  display: inline;
+  margin-top: 1rem;
+}
+
+.profile ul li:first-child {
+  margin-top: 0;
+}
+
+.profile ul li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+.profile ul li:after {
+  content: ", ";
+}
+
+.profile ul li:last-child:after {
+  content: "";
+}
+
+.profile ul li a:hover {
+  text-decoration: underline;
+}
