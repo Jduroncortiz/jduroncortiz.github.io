@@ -39,6 +39,7 @@ body.fade-out {
   max-width: 900px;      
   width: 100%;           
   text-align: center;   
+  margin: 0 auto; 
 }
 .nav-inner a {
   color: #1e3a5f;
@@ -172,7 +173,8 @@ h2 {
 
 /* ====== Responsive ====== */
 @media (max-width: 768px) {
-  .container {
+  .container,
+  .nav-inner {
     padding: 20px;
     margin: 20px;
   }
@@ -188,7 +190,8 @@ h2 {
     margin: 0 8px;
     font-size: 1.3rem;
   }
-  .container {
+  .container,
+  .nav-inner {
     padding: 15px;
   }
   h1 {
@@ -213,7 +216,10 @@ h2 {
     width: 100%;
   }
   .progress-bar {
-    animation: none;
+    animation: none !important;
     width: var(--progress) !important;
+    background-color: #1e3a5f !important;
+    color: #fff !important;
   }
 }
+
