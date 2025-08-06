@@ -92,19 +92,20 @@ body.fade-out {
 }
 
 /* ====== Homepage Specific ====== */
-.homepage-links ul {
+.homepage-links{
   margin: 20px 0 0;
   padding: 0;
+  text-align: center;
 }
-.homepage-links ul li {
+.homepage-links li {
   list-style-type: none;
   display: inline;
   margin: 0 5px;
 }
-.homepage-links ul li:after {
+.homepage-links li:after {
   content: ", ";
 }
-.homepage-links ul li:last-child:after {
+.homepage-links li:last-child:after {
   content: "";
 }
 
