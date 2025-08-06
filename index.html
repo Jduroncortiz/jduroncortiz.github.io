@@ -26,26 +26,45 @@
 </head>
 
 <body>
-    <div class="profile">
-        <div class="profile__inner">
-            <!--
-            <img src="Foto Profile.jpg" alt="JDC"> -->
-            <h1>Javier Durón Cortiz</h1>
-            <p>Mechatronics engineer with a focus on Industrial Automation - +7 years of experience</p>
-            <p>Software engineer with a focus on Embedded Systems - +5 years of experience</p>
-            <p>Electronics engineer with a focus on Analog and Sigital Systems Design - +3 years of experience</p>
-            <p><a href="mailto:jduroncortiz@gmail.com">jduroncortiz@gmail.com</a></p>
-            <ul>
-                <li><a href="https://github.com/jduroncortiz" target="_blank">GitHub</a></li>
-                <!-- <li><a href=""_blank">Dribbble</a></li> -->
-                <li><a href="https://www.linkedin.com/in/javierduron/" target="_blank">LinkedIn</a></li>
-                <li><a href="cv2.html">CV</a></li>
-                <li><a href="https://facebook.com/javi.duron.1" target="_blank">Facebook</a></li>
-                <li><a href="https://www.instagram.com/jduroncortiz/" target="_blank">Instagram</a></li>
-            </ul>
-        </div>
-    </div>
+
+    <!-- Navigation -->
+<nav class="top-nav">
+  <a href="index.html">Home</a>
+  <a href="cv.html">CV</a>
+</nav>
+
+  <div class="container">
+    <h1>Javier Durón Cortiz</h1>
+    <p>Mechatronics engineer with a focus on Industrial Automation – +7 years of experience</p>
+    <p>Software engineer with a focus on Embedded Systems – +5 years of experience</p>
+    <p>Electronics engineer with a focus on Analog and Digital Systems Design – +3 years of experience</p>
+    <p><a href="mailto:jduroncortiz@gmail.com">jduroncortiz@gmail.com</a></p>
+    <ul>
+      <li><a href="https://github.com/jduroncortiz" target="_blank">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/javierduron/" target="_blank">LinkedIn</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="https://facebook.com/javi.duron.1" target="_blank">Facebook</a></li>
+      <li><a href="https://www.instagram.com/jduroncortiz/" target="_blank">Instagram</a></li>
+    </ul>
+  </div>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("fade-in");
+
+  document.querySelectorAll("a[href]").forEach(link => {
+    if (link.getAttribute("href").startsWith("http") || link.getAttribute("href").startsWith("mailto")) return;
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const url = link.getAttribute("href");
+      document.body.classList.remove("fade-in");
+      document.body.classList.add("fade-out");
+      setTimeout(() => { window.location = url; }, 300);
+    });
+  });
+});
+</script>
 
 </body>
+
 
 </html>
