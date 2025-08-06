@@ -1,20 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CV – Javier Durón Cortiz</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navigation -->
-<div class="nav-container">
-  <div class="nav-inner">
-    <a href="index.html">Home</a>
-    <a href="cv.html">CV</a>
-    <a href="#" onclick="window.print()">Print</a>
+  <div class="nav-container">
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+      <a href="cv.html" class="active">CV</a>
+      <a href="#" onclick="window.print()">Print</a>
+    </div>
   </div>
-</div>
 
   <!-- CV Content -->
   <div class="container cv-container">
@@ -73,22 +73,28 @@
       <p>LinkedIn: <a href="#">[Your LinkedIn URL]</a></p>
     </div>
   </div>
+
+  <!-- Smooth transition script -->
   <script>
-document.addEventListener("DOMContentLoaded", () => {
-  document.body.classList.add("fade-in");
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("fade-in");
 
-  document.querySelectorAll("a[href]").forEach(link => {
-    if (link.getAttribute("href").startsWith("http") || link.getAttribute("href").startsWith("mailto")) return;
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      const url = link.getAttribute("href");
-      document.body.classList.remove("fade-in");
-      document.body.classList.add("fade-out");
-      setTimeout(() => { window.location = url; }, 300);
+      document.querySelectorAll("a[href]").forEach(link => {
+        if (
+          link.getAttribute("href").startsWith("http") ||
+          link.getAttribute("href").startsWith("mailto") ||
+          link.getAttribute("onclick")
+        ) return;
+
+        link.addEventListener("click", e => {
+          e.preventDefault();
+          const url = link.getAttribute("href");
+          document.body.classList.remove("fade-in");
+          document.body.classList.add("fade-out");
+          setTimeout(() => { window.location = url; }, 300);
+        });
+      });
     });
-  });
-});
-</script>
-
+  </script>
 </body>
 </html>
