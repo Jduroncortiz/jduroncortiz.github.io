@@ -1,41 +1,21 @@
 <!doctype html>
-<html class="no-js" lang="">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Javier Durón Cortiz | Electromechanical, software and ICT Engineer</title>
-
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1">
-    <meta name="author" content="Javier Durón Cortiz">
-    <meta name="description" content="Senior automation engineer">
-    <meta name="keywords" content="sofware engineering, mechatronics, electronics engineering, programming">
-    <meta property="og:title" content="Javier Durón Cortiz ; Electromechanical, software and ICT Engineer">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="https://jduroncortiz.github.io/">
-    <meta property="og:description" content="Technologist with a passion for music and philosophy.">
-    <meta property="og:site_name" content="Javier Durón Cortiz">
-
-
-    <link rel="apple-touch-icon" href="icon.png">
-    <link rel="shortcut icon" href="icon.png">
-
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Javier Durón Cortiz | Electromechanical, Software & ICT Engineer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <!-- Navigation -->
-<div class="nav-container">
-  <div class="nav-inner">
-    <a href="index.html">Home</a>
-    <a href="cv.html">CV</a>
+  <!-- Navigation -->
+  <div class="nav-container">
+    <div class="nav-inner">
+      <a href="index.html" class="active">Home</a>
+      <a href="cv.html">CV</a>
+    </div>
   </div>
-</div>
 
-
+  <!-- Main Content -->
   <div class="container">
     <h1>Javier Durón Cortiz</h1>
     <p>Mechatronics engineer with a focus on Industrial Automation – +7 years of experience</p>
@@ -50,24 +30,27 @@
       <li><a href="https://www.instagram.com/jduroncortiz/" target="_blank">Instagram</a></li>
     </ul>
   </div>
-    <script>
-document.addEventListener("DOMContentLoaded", () => {
-  document.body.classList.add("fade-in");
 
-  document.querySelectorAll("a[href]").forEach(link => {
-    if (link.getAttribute("href").startsWith("http") || link.getAttribute("href").startsWith("mailto")) return;
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      const url = link.getAttribute("href");
-      document.body.classList.remove("fade-in");
-      document.body.classList.add("fade-out");
-      setTimeout(() => { window.location = url; }, 300);
+  <!-- Smooth transition script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("fade-in");
+
+      document.querySelectorAll("a[href]").forEach(link => {
+        if (
+          link.getAttribute("href").startsWith("http") ||
+          link.getAttribute("href").startsWith("mailto")
+        ) return;
+
+        link.addEventListener("click", e => {
+          e.preventDefault();
+          const url = link.getAttribute("href");
+          document.body.classList.remove("fade-in");
+          document.body.classList.add("fade-out");
+          setTimeout(() => { window.location = url; }, 300);
+        });
+      });
     });
-  });
-});
-</script>
-
+  </script>
 </body>
-
-
 </html>
