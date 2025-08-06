@@ -1,0 +1,141 @@
+/* Reset & Base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Back Button */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #1e3a5f;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+.back-btn:hover {
+  background: #2b4f85;
+}
+
+/* Container */
+.cv-container {
+  max-width: 900px;
+  width: 100%;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  margin-bottom: 5px;
+  color: #1e3a5f;
+}
+p.subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Section titles */
+h2 {
+  color: #1e3a5f;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #1e3a5f;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+/* Skills */
+.skill {
+  margin: 12px 0;
+}
+.skill-name {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.progress-container {
+  background: #ddd;
+  border-radius: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 100%;
+  background: #1e3a5f;
+  color: #fff;
+  text-align: right;
+  padding-right: 8px;
+  line-height: 20px;
+  width: 0;
+  animation: loadBar 2s forwards;
+}
+@keyframes loadBar {
+  from { width: 0; }
+  to { width: var(--progress); }
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+}
+
+/* Contact */
+.contact a {
+  color: #1e3a5f;
+  text-decoration: none;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cv-container {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  .back-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  .cv-container {
+    padding: 15px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  p.subtitle {
+    font-size: 14px;
+  }
+}
