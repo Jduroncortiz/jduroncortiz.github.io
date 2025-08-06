@@ -173,32 +173,7 @@ h2 {
   width: var(--progress); /* Always show full width even on print */
   animation: loadBar 2s forwards;
 }
-/* Faint dividers every 25% */
-.progress-bar::before,
-.progress-bar::after,
-.progress-bar div::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background-color: rgba(0, 0, 0, 0.1); /* faint gray */
-}
 
-/* Divider at 25% */
-.progress-bar::before {
-  left: 25%;
-}
-
-/* Divider at 50% */
-.progress-bar div::before {
-  left: 50%;
-}
-
-/* Divider at 75% */
-.progress-bar::after {
-  left: 75%;
-}
 @keyframes loadBar {
   from { width: 0; }
   to { width: var(--progress); }
