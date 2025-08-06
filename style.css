@@ -1,6 +1,4 @@
-/* ==============================
-   GLOBAL BASE STYLES
-============================== */
+/* ========== GLOBAL BASE ========== */
 * {
   box-sizing: border-box;
 }
@@ -13,7 +11,7 @@ body {
   font-family: "Inconsolata", monospace;
   font-size: 1.4rem;
   line-height: 1.5;
-  padding: 0;
+  padding: 20px;
   margin: 0;
   background: #f5f7fa;
   color: #333;
@@ -28,95 +26,16 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ==============================
-   HOMEPAGE STYLES
-============================== */
-
-.profile {
-  max-width: 70rem;
-  text-align: center;
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.profile__inner {
-  margin: 0 3rem;
-}
-
-.profile img {
-  border-radius: 100%;
-  display: block;
-  margin: 0 auto;
-  height: auto;
-  width: 10rem;
-  filter: grayscale(0%);
-}
-
-.profile h1 {
-  margin: 1rem 0;
-}
-
-.profile p {
-  margin: 1rem 0 3rem 0;
-}
-
-.profile ul {
-  margin: 0;
-  padding: 0;
-}
-
-.profile ul li {
-  list-style-type: none;
-  display: inline;
-  margin-top: 1rem;
-}
-
-.profile ul li:first-child {
-  margin-top: 0;
-}
-
-.profile ul li:after {
-  content: ", ";
-}
-
-.profile ul li:last-child:after {
-  content: "";
-}
-
-/* ==============================
-   CV PAGE STYLES
-============================== */
-
-/* Back Button */
-.back-btn {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  background: #1e3a5f;
-  color: #fff;
-  padding: 8px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 14px;
-  transition: background 0.3s ease;
-}
-.back-btn:hover {
-  background: #2b4f85;
-}
-
-/* CV Container */
-.cv-container {
+/* ========== CONTAINER (shared by homepage & CV) ========== */
+.container {
   max-width: 900px;
-  width: 100%;
   background: white;
   padding: 30px;
+  margin: 40px auto;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
   animation: fadeIn 0.8s ease;
-  margin: 40px auto;
 }
 
 @keyframes fadeIn {
@@ -124,20 +43,59 @@ a:hover {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* CV Header */
+/* ========== HOMEPAGE SPECIFIC ========== */
+.container ul {
+  margin: 20px 0 0;
+  padding: 0;
+}
+.container ul li {
+  list-style-type: none;
+  display: inline;
+  margin: 0 5px;
+}
+.container ul li:after {
+  content: ", ";
+}
+.container ul li:last-child:after {
+  content: "";
+}
+
+/* ========== TOP BUTTONS (CV) ========== */
+.top-buttons {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.back-btn,
+.print-btn {
+  background: #1e3a5f;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+.back-btn:hover,
+.print-btn:hover {
+  background: #2b4f85;
+}
+
+/* ========== CV SECTIONS ========== */
 h1 {
-  text-align: center;
-  margin-bottom: 5px;
   color: #1e3a5f;
+  margin-bottom: 5px;
 }
 p.subtitle {
-  text-align: center;
   font-size: 16px;
   color: #555;
   margin-bottom: 20px;
 }
-
-/* Section titles */
 h2 {
   color: #1e3a5f;
   margin-top: 30px;
@@ -150,6 +108,7 @@ h2 {
 /* Skills */
 .skill {
   margin: 12px 0;
+  text-align: left;
 }
 .skill-name {
   font-weight: bold;
@@ -176,12 +135,13 @@ h2 {
   to { width: var(--progress); }
 }
 
-/* Lists */
-ul {
+/* Lists in CV */
+.cv-container ul {
   padding-left: 20px;
+  text-align: left;
 }
 
-/* Contact links in CV */
+/* Contact links */
 .contact a {
   color: #1e3a5f;
 }
@@ -189,11 +149,9 @@ ul {
   text-decoration: underline;
 }
 
-/* ==============================
-   RESPONSIVE DESIGN
-============================== */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
-  .cv-container {
+  .container {
     padding: 20px;
     margin: 20px;
   }
@@ -203,22 +161,17 @@ ul {
   h2 {
     font-size: 18px;
   }
-  .back-btn {
+  .back-btn,
+  .print-btn {
     padding: 6px 12px;
     font-size: 12px;
   }
-  .profile {
-    position: static;
-    transform: none;
-    margin-top: 50px;
-  }
 }
-
 @media (max-width: 480px) {
   body {
     padding: 10px;
   }
-  .cv-container {
+  .container {
     padding: 15px;
   }
   h1 {
