@@ -4,20 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Javier Durón Cortiz">
-  <meta name="description" content="Senior automation engineer">
-  <meta name="keywords" content="sofware engineering, mechatronics, electronics engineering, programming">
-  <meta property="og:title" content="Javier Durón Cortiz ; Electromechanical, software and ICT Engineer">
+  <meta name="description" content="Javier Durón Cortiz — MSc Electronics & ICT Engineering Technology student at KU Leuven, focused on chip design, embedded systems, instrumentation and mechatronics.">
+  <meta name="keywords" content="electronics engineering, chip design, embedded systems, mechatronics, instrumentation, photonics, quantum technologies, KU Leuven">
+  <meta property="og:title" content="Javier Durón Cortiz | Electronics & ICT Engineering">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="">
   <meta property="og:url" content="https://jduroncortiz.github.io/">
-  <meta property="og:description" content="Technologist with a passion for music and philosophy.">
+  <meta property="og:description" content="Electronics & ICT Engineering MSc student at KU Leuven with a background in industrial mechatronics, embedded systems and experimental instrumentation.">
   <meta property="og:site_name" content="Javier Durón Cortiz">
-  
-  <title>Javier Durón Cortiz | Mechatronics, Software & Electronics Engineer</title>
+
+  <title>Javier Durón Cortiz | Electronics & ICT Engineering</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation -->
   <div class="nav-container">
     <div class="nav-inner">
       <a href="index.html" class="active">Home</a>
@@ -25,39 +23,39 @@
     </div>
   </div>
 
-  <!-- Main Content -->
-  <div class="container">
+  <main class="container home-container">
     <h1>Javier Durón Cortiz</h1>
-    <p>Mechatronics engineer with a focus on Industrial Automation – +8 years of experience</p>
-    <p>Software engineer with a focus on Embedded Systems – +6 years of experience</p>
-    <p>Electronics engineer with a focus on Analog and Digital Systems Design – +5 years of experience</p>
-    <p><a href="mailto:jduroncortiz@gmail.com">jduroncortiz@gmail.com</a></p>
-    <ul class="homepage-links">
-      <li><a href="https://github.com/jduroncortiz" target="_blank">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/javierduron/" target="_blank">LinkedIn</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="https://facebook.com/javi.duron.1" target="_blank">Facebook</a></li>
-      <li><a href="https://www.instagram.com/jduroncortiz/" target="_blank">Instagram</a></li>
-    </ul>
+    <p class="hero-title">MSc Electronics &amp; ICT Engineering Technology — Chip Design</p>
+    <p class="hero-subtitle">KU Leuven · Embedded Systems · Electronics · Instrumentation · Mechatronics</p>
 
-    <p></p>
-    <p>Get to know me a bit better in <a href="https://www.canalsur.es/television/programas/andalucia-x-el-mundo/noticia/2187042.html" target="_blank">this interview</a> for a Spanish public TV and/or 
-    <a href="https://huelvabuenasnoticias.com/2018/05/07/el-onubense-javier-duron-comparte-su-experiencia-en-la-ciudad-belga-de-lovaina/" target="_blank">this one</a> for a local newspaper.
+    <p class="home-summary">
+      Engineering professional with around eight years of experience in automation, laboratory instrumentation and electromechanical systems. Currently completing an MSc at KU Leuven and expanding my background toward integrated photonics and quantum technologies.
     </p>
-    
-  </div>
 
-  <!-- Smooth transition script -->
+    <div class="interest-pills" aria-label="Current interests">
+      <span>Chip Design</span>
+      <span>Embedded Systems</span>
+      <span>Integrated Photonics</span>
+      <span>Quantum Technologies</span>
+      <span>Experimental Characterization</span>
+    </div>
+
+    <ul class="homepage-links">
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="https://github.com/jduroncortiz" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/javierduron/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:jduroncortiz@gmail.com">Email</a></li>
+    </ul>
+  </main>
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.add("fade-in");
-
       document.querySelectorAll("a[href]").forEach(link => {
         if (
           link.getAttribute("href").startsWith("http") ||
           link.getAttribute("href").startsWith("mailto")
         ) return;
-
         link.addEventListener("click", e => {
           e.preventDefault();
           const url = link.getAttribute("href");
